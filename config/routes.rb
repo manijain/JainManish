@@ -5,6 +5,12 @@ JainManish::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
+  get '/about' => 'welcome#about', :as=> 'about'
+  get '/my-skill' => 'welcome#skill', :as=> 'skill'
+  get '/portfolio' => 'welcome#portfolio', :as=> 'portfolio'
+  get '/resume' => 'welcome#resume', :as=> 'resume'
+  get '/contact-me' => 'welcome#contact', :as=> 'contact'
+
   resources :posts do
     resources :comments
   end

@@ -16,11 +16,11 @@
         <h4><i class="icon-beaker icon-white"></i> About</h4>
         <nav>
           <ul class="quick-links">
-            <li><a href="our_works.html">My skill</a></li>
-            <li><a href="patnerships.html">Blog</a></li>
-            <li><a href="events.html">Portfolio</a></li>
-            <li><a href="events.html">Resume</a></li>
-            <li><a href="events.html">Events</a></li>
+            <li><%= link_to 'My skill', skill_path %></li>
+            <li><%= link_to 'Blog', posts_path %></li>
+            <li><%= link_to 'Portfolio', portfolio_path %></li>
+            <li><%= link_to 'Resume', resume_path %></li>
+            <li><%= link_to 'Events', '#' %></li>
           <ul>
         </ul></ul></nav>          
       </div>
@@ -28,8 +28,8 @@
         <h4><i class="icon-thumbs-up icon-white"></i> Support</h4>
         <nav>
           <ul class="quick-links">
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contact_us.html">Contact Me</a></li>            
+            <li><a href="#">FAQ</a></li>
+            <li><%= link_to 'Contact', contact_path %></li>
           </ul>
         </nav>
       </div>
