@@ -1,0 +1,30 @@
+/* add font css */
+
+.devroye {
+    font-family: "devroye2" !important;
+}
+
+#home_page_contents p {
+    letter-spacing: 1px !important;
+    word-spacing: 1px !important;
+}
+p {
+    margin: 0 0 10px !important;
+}
+
+#home_page_contents {
+    text-align: justify !important;
+}
+
+.thumbnail {
+	border: 8px solid #DDDDDD !important;
+    border-radius: 4px !important;
+    padding: 2px !important;
+    max-width: 70% !important;
+    max-height: 80% !important;
+    margin-left: 40px !important;
+}
+
+.st-edu {
+    margin-left: -100px !important;
+}
