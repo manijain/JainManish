@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.1'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
 
 # Use for Active Record on Production
 gem 'pg'
