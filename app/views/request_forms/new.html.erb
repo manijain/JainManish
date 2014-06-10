@@ -2,10 +2,10 @@
   <div class="container">
     <div class="page-header">
       <h1><i class="icon-envelope-alt"></i> Contact us</h1>
-      
-        <p class="pull-right">welcome, <%= current_user.email %></p><br>
+      <% if current_user.try(:is_admin) == true %>
+        <p class="pull-right">welcome, <%= current_user.try(:email) %></p><br>
         <%= link_to "show listing", request_forms_path %> | <%= link_to "Back", root_path %>
-     
+      <% end %>
     </div>
     <div class="row-fluid">
       <center>

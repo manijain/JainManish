@@ -1,18 +1,21 @@
+<div class="row">
 <p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+  <h3><%= @post.title %></h3>
+</p><br>
 
 <p>
-  <strong>Text:</strong>
-  <%= @post.text %>
+  <h5><%= @post.text %></h5>
 </p>
+</div>
+<br>
 
-<h2>Comments</h2>
-<%= render @post.comments %>
- 
-<h2>Add a comment:</h2>
-<%= render "comments/form" %>
- 
-<%= link_to 'Edit Post', edit_post_path(@post) if current_user.try(:is_admin) == true %>
-| <%= link_to 'Back to Posts', posts_path %>
+<div class="row">
+	<h2>Comments</h2>
+	<%= render @post.comments %>
+	 
+	<h2>Add a comment:</h2>
+	<%= render "comments/form" %>
+	 
+	<%= link_to 'Edit Post', edit_post_path(@post) if current_user.try(:is_admin) == true %>
+	| <%= link_to 'Back to Posts', posts_path %>
+</div>
