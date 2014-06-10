@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @request_form.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @request_form.email %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @request_form.message %>
+</p>
+
+<%= link_to 'Edit', edit_request_form_path(@request_form) %> |
+<%= link_to 'Back', request_forms_path %>

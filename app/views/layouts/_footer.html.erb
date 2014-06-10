@@ -6,7 +6,13 @@
         <%= link_to 'Blog', posts_path %> &nbsp &nbsp | &nbsp &nbsp
         <%= link_to 'Portfolio', portfolio_path %> &nbsp &nbsp | &nbsp &nbsp
         <%= link_to 'Resume', resume_path %> &nbsp &nbsp | &nbsp &nbsp
-        <%= link_to 'Contact Me', '#' %>
+        <%= link_to 'Contact Me', '#' %>&nbsp &nbsp | &nbsp &nbsp
+        <% if user_signed_in? %>
+          Welcome <%= current_user.email %>
+          <%= link_to 'logout', destroy_user_session_path, :method => :delete %>
+        <% else %>
+          <%= link_to 'Login', new_user_session_path %>
+        <% end %>
       </p>
     </center>
 <!--     <div class="row">

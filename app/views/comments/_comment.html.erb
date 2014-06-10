@@ -11,5 +11,5 @@
 <p>
   <%= link_to 'Destroy Comment', [comment.post, comment],
                method: :delete,
-               data: { confirm: 'Are you sure?' } %>
+               data: { confirm: 'Are you sure?' } if current_user.try(:is_admin) == true %>
 </p>

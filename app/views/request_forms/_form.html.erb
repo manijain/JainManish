@@ -1,0 +1,38 @@
+<%= form_for(@request_form) do |f| %>
+  <% if @request_form.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@request_form.errors.count, "error") %> prohibited this request_form from being saved:</h2>
+
+      <ul>
+      <% @request_form.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <div class="controls">
+      <%= f.text_field :name, :placeholder => 'Name', :id => 'inputName' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <div class="controls">
+      <%= f.email_field :email, :placeholder => 'Email', :id => 'inputName' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <div class="controls">
+      <%= f.text_area :message, :placeholder => 'Message', :id => 'inputName' %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <div class="controls">
+      <%= f.submit 'Submit', :class => 'btn btn-primary btn-large' %>
+    </div>
+  </div>
+
+<% end %>

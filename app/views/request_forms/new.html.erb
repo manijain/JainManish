@@ -1,0 +1,47 @@
+<div class="content devroye", id="home_page_contents">
+  <div class="container">
+    <div class="page-header">
+      <h1><i class="icon-envelope-alt"></i> Contact us</h1>
+      
+        <p class="pull-right">welcome, <%= current_user.email %></p><br>
+        <%= link_to "show listing", request_forms_path %> | <%= link_to "Back", root_path %>
+     
+    </div>
+    <div class="row-fluid">
+      <center>
+        <h3>
+          I’d love to hear from you. Interested in working together? Fill out the form below with some info about your project and I will get back to you as soon as I can. Please allow a couple days for me to respond.
+        </h3>
+      </center>
+      <br>
+      <!-- Start: CONTACT US FORM -->
+      <div class="span4 offset1">
+        <div class="page-header">
+          <h3><i>Quick message</i></h3>
+        </div>
+        <%= render 'form' %>        
+      </div>
+      <!-- End: CONTACT US FORM -->
+      <!-- Start: OFFICES -->
+      <div class="span5 offset1">
+        <div class="page-header">
+          <h3><i>Get in touch with me</i></h3>
+        </div>
+        <!-- <h3></h3> -->
+        <div>
+          <address class="pull-left">
+            <p><strong>phone :</strong><br>
+            +91 - 9785394039</p>
+            <p><strong>email :</strong><br>
+            manijain333@gmail.com</p>
+            <p><strong>Address :</strong><br>
+            C58A, Bhartendu Chowk,<br>
+            Ambabari, jaipur (Rajasthan)<br>
+            302010<br>
+          </address><br><br>
+        </div>
+      <!-- End: OFFICES -->
+      </div>
+    </div>
+  </div>
+</div>

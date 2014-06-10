@@ -14,5 +14,5 @@
 <h2>Add a comment:</h2>
 <%= render "comments/form" %>
  
-<%= link_to 'Edit Post', edit_post_path(@post) %>
+<%= link_to 'Edit Post', edit_post_path(@post) if current_user.try(:is_admin) == true %>
 | <%= link_to 'Back to Posts', posts_path %>

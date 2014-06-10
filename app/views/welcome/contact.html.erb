@@ -6,7 +6,7 @@
     <div class="row-fluid">
       <center>
       <h3>
-        We’d love to hear from you. Interested in working together? Fill out the form below with some info about your project and I will get back to you as soon as I can. Please allow a couple days for me to respond.
+        I’d love to hear from you. Interested in working together? Fill out the form below with some info about your project and I will get back to you as soon as I can. Please allow a couple days for me to respond.
       </h3>
       </center>
       <br>
@@ -15,28 +15,32 @@
         <div class="page-header">
           <h3><i>Quick message</i></h3>
         </div>
-        <form class="form-contact-us">
+
+        <%= form_for(@user_request) do |f| %> 
+        
           <div class="control-group">
             <div class="controls">
-              <input type="text" placeholder="Name" id="inputName">
+<!--               <input type="text" placeholder="Name" id="inputName"> -->
+              <%= f.text_field :name, :placeholder => 'Name', :id => 'inputName' %>
             </div>
           </div>
           <div class="control-group">
             <div class="controls">
-              <input type="text" placeholder="Email" id="inputEmail">
+              <!-- <input type="text" placeholder="Email" id="inputEmail"> -->
+              <%= f.text_field :email, :placeholder => 'Email', :id => 'inputEmail' %>
             </div>
           </div>
           <div class="control-group">
             <div class="controls">
-              <textarea placeholder="Message" id="inputMessage"></textarea>
+              <%= f.text_field :message, :placeholder => 'Message', :id => 'inputMessage' %>
             </div>
           </div>
           <div class="control-group">
             <div class="controls">
-              <input type="submit" value="Send" class="btn btn-primary btn-large">
+              <%= f.submit 'Submit', :class => 'btn btn-primary btn-large' %>
             </div>
           </div>
-        </form>
+        <% end %>
       </div>
       <!-- End: CONTACT US FORM -->
       <!-- Start: OFFICES -->
